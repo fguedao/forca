@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jogo da Forca</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>🎯 Jogo da Forca</h1>
+
+  <div id="setup">
+    <label for="palavra">Digite a palavra secreta:</label>
+    <input type="password" id="palavra" />
+    <button onclick="iniciarJogo()">Iniciar</button>
+  </div>
+
+  <div id="jogo" style="display: none;">
+    <svg id="forca" width="200" height="250">
+      <!-- Estrutura da forca -->
+      <line x1="10" y1="240" x2="150" y2="240" stroke="#000" stroke-width="4"/> <!-- base -->
+      <line x1="50" y1="240" x2="50" y2="20" stroke="#000" stroke-width="4"/>   <!-- poste -->
+      <line x1="50" y1="20" x2="130" y2="20" stroke="#000" stroke-width="4"/>    <!-- topo -->
+      <line x1="130" y1="20" x2="130" y2="40" stroke="#000" stroke-width="4"/>   <!-- corda -->
+
+      <!-- Boneco -->
+      <circle id="cabeca" cx="130" cy="60" r="20" stroke="#000" stroke-width="3" fill="none" style="display:none"/>
+      <line id="tronco" x1="130" y1="80" x2="130" y2="140" stroke="#000" stroke-width="3" style="display:none"/>
+      <line id="bracoE" x1="130" y1="100" x2="110" y2="120" stroke="#000" stroke-width="3" style="display:none"/>
+      <line id="bracoD" x1="130" y1="100" x2="150" y2="120" stroke="#000" stroke-width="3" style="display:none"/>
+      <line id="pernaE" x1="130" y1="140" x2="110" y2="180" stroke="#000" stroke-width="3" style="display:none"/>
+      <line id="pernaD" x1="130" y1="140" x2="150" y2="180" stroke="#000" stroke-width="3" style="display:none"/>
+    </svg>
+
+    <p id="palavraOculta"></p>
+
+    <input type="text" id="letra" maxlength="1" />
+    <button onclick="tentarLetra()">Tentar</button>
+
+    <p>Letras erradas: <span id="erradas"></span></p>
+    <p>Tentativas restantes: <span id="tentativas"></span></p>
+    <p id="mensagem"></p>
+  </div>
+
+  <!-- 🎊 Confetes ao vencer -->
+  <canvas id="confetes" style="position:fixed; top:0; left:0; width:100vw; height:100vh; pointer-events:none; z-index:999; display:none;"></canvas>
+
+  <!-- 🩸 Mancha de sangue ao perder -->
+  <div id="sangue" class="sangue" style="display: none;"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

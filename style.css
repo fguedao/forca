@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 2rem;
+    background: #f0f4f8;
+    color: #333;
+  }
+  
+  h1 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+  }
+  
+  #setup,
+  #jogo {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  input[type="password"],
+  input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 60%;
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 1rem;
+    background-color: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #1a252f;
+  }
+  
+  #palavraOculta {
+    font-size: 2rem;
+    letter-spacing: 12px;
+    margin: 30px 0;
+    font-weight: bold;
+  }
+  
+  #erradas,
+  #tentativas,
+  #mensagem {
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
+  
+  #mensagem {
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  svg {
+    margin: 0 auto 20px;
+    display: block;
+  }
